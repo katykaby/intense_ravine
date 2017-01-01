@@ -1,11 +1,43 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php 
+
+$db = pg_connect("host=ec2-54-163-224-108.compute-1.amazonaws.com dbname=d9t4r8954vvba3 user=yomlmtzgbvdiya password=66b229c283e54a5773083dee1a8f235efd249da9c9ee10fad63841f0bed93090")/* or die("Can't connect to database".pg_last_error())*/;
+
+
+try
+{
+  $db = new PDO($dsn);
+}
+catch(PDOException $pe)
+{
+  die('Connection error, because: ' .$pe->getMessage());
+}
+
+
+$query = 'CREATE TABLE mytable (
+    id SERIAL,
+    facebookid BIGSERIAL,
+    mytext TEXT,
+    inserted TIMESTAMP
+);';
+$db->query($query);
+ 
+$query = 'INSERT INTO mytable (facebookid,mytext,inserted)'
+    . ' VALUES (1603196280,"test",now());';
+$db->query($query);
+var_dump($db->errorInfo());
+
+?>
 <head>
 <title>VictoryPro</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/coin-slider.css" />
-<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/
+
+
+ ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhcufon-yui.js"></script>
 <script type="text/javascript" src="js/cufon-georgia.js"></script>
 <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
@@ -13,7 +45,10 @@
 </head>
 <body>
 <div class="main">
-  <div class="header">
+  <div class="header">Us</span></a></li>
+        </ul>
+      </div>
+      <div class="logo">
     <div class="header_resize">
       <div class="menu_nav">
         <ul>
@@ -21,10 +56,7 @@
           <li><a href="support.html"><span>Support</span></a></li>
           <li><a href="about.html"><span>About Us</span></a></li>
           <li><a href="blog.html"><span>Blog</span></a></li>
-          <li><a href="contact.html"><span>Contact Us</span></a></li>
-        </ul>
-      </div>
-      <div class="logo">
+          <li><a href="contact.html"><span>Contact 
         <h1><a href="index.html">Victory<span>Pro</span></a></h1>
       </div>
       <div class="clr"></div>
